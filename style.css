@@ -1,0 +1,112 @@
+/* General Reset */
+body {
+    font-family: 'Georgia', serif;
+    text-align: center;
+    background-color: #FAF3E0; /* Antique White */
+    margin: 0;
+    padding: 0;
+    color: #2F4F4F; /* Deep Green */
+}
+
+header {
+    background-color: #2E4A3F; /* Hunter Green */
+    color: white;
+    padding: 20px 0;
+}
+
+h1, h2 {
+    font-family: 'Georgia', serif;
+    margin: 10px 0;
+}
+
+.team {
+    margin-top: 40px;
+}
+
+.supervisor-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 0 20px 30px;
+}
+
+.card {
+    background-color: #FFFFF0; /* Ivory */
+    border-radius: 12px;
+    border: 2px solid #D4AF37; /* Gold border */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    width: 220px;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #2F4F4F; /* Deep Green */
+}
+
+.supervisor {
+    background-color: #FFF8DC; /* Light Champagne */
+    border: 2px solid #B89B6A; /* Darker gold */
+}
+
+/* Game Section */
+.game-section {
+    margin-top: 60px;
+    background: #F7E7CE; /* Champagne */
+    padding: 25px;
+    border-top: 2px solid #D4AF37;
+}
+
+#gameArea {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+    background-color: #FFF8DC;
+    border: 2px solid #B89B6A;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#box {
+    width: 30px;
+    height: 30px;
+    background-color: #800020; /* Burgundy */
+    position: absolute;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #2E4A3F;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3e6555;
+}
+
+#scoreDisplay {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #2F4F4F;
+}
