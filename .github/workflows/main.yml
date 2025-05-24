@@ -1,5 +1,4 @@
-# File: .github/workflows/deploy.yml
-name: Deploy to GitHub Pages
+name: Deploy FYP Static Site
 
 on:
   push:
@@ -11,14 +10,9 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -26,10 +20,10 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
-      - name: Upload artifact
+      - name: Upload HTML files
         uses: actions/upload-pages-artifact@v2
         with:
-          path: ../index.html
+          path: 'FYP'
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
