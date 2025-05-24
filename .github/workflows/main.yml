@@ -1,27 +1,35 @@
+# File: .github/workflows/deploy.yml
 name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # or 'master', depending on your default branch
+      - main
 
 permissions:
-  contents: write  # Allow write permissions for deployment
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup Pages 📄
+      - name: Setup Pages
         uses: actions/configure-pages@v3
 
-      - name: Upload artifact 📦
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: ../index.html  # Adjust this if your site is in a subfolder
+          path: ../index.html
 
-      - name: Deploy 🚀
+      - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
